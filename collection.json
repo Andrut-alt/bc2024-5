@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "c2ffb0d4-f563-43bd-95bc-3ae32feba2f2",
+		"name": "collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39461831"
+	},
+	"item": [
+		{
+			"name": "UploadForm",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/notes/"
+			},
+			"response": []
+		},
+		{
+			"name": "/notes/theFirstOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/notes/theFirstOne"
+			},
+			"response": []
+		},
+		{
+			"name": "404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/notes/theFirstOneFail"
+			},
+			"response": []
+		},
+		{
+			"name": "201",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "note_name",
+							"value": "theNEWone",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "Oh, i cant help u(",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/write"
+			},
+			"response": []
+		},
+		{
+			"name": "200",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/notes/theNEWone"
+			},
+			"response": []
+		},
+		{
+			"name": "NewText",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "My new text ",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "http://localhost:3000/notes/theFirstOne"
+			},
+			"response": []
+		}
+	]
+}
